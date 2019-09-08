@@ -25,7 +25,7 @@ SECRET_KEY = '962mcp#v0+pq5ye2m@1wvw1r)%_z0%e$_qq=a$2dl52rs%6cg1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.meiduo.site','192.168.229.148','127.0.0.1']
+ALLOWED_HOSTS = ['www.meiduo.site','192.168.119.128','127.0.0.1']
 
 
 # Application definition
@@ -46,6 +46,13 @@ INSTALLED_APPS = [
     'apps.payment',
     'haystack',
     'django_crontab',
+
+    # 注册 meiduo_admin子应用
+    'apps.meiduo_admin',
+    # 注册 CORS
+    'corsheaders',
+    # 注册 DRF
+    'rest_framework',
 ]
 
 CRONJOBS = [
@@ -54,7 +61,7 @@ CRONJOBS = [
 ]
 
 MIDDLEWARE = [
-
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -264,7 +271,7 @@ DEFAULT_FILE_STORAGE = 'utils.fastdfs.storage.FastDFSStorage'
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-        'URL': 'http://192.168.229.148:9200/',
+        'URL': 'http://192.168.119.128:9200/',
         'INDEX_NAME': 'meiduo',
     },
 }
@@ -283,7 +290,7 @@ REST_FRAMEWORK = {
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
-    ),
+    )
 }
 
 import datetime
