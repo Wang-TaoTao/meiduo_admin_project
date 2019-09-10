@@ -94,6 +94,7 @@ class SmsCodeView(View):
         #调用celery任务
         from celery_tasks.sms.tasks import send_sms_code
         send_sms_code.delay(mobile,sms_code)
+        print("手机验证码是:%s" % sms_code)
 
         #返回相应
         return http.JsonResponse({'code':RETCODE.OK,'errmsg':'ok'})

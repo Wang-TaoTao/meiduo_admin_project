@@ -114,6 +114,7 @@ export default {
               "username": this.userForm.username,
               "mobile": this.userForm.mobile,
               "password": this.userForm.password,
+	      "passcheck": this.userForm.passcheck,
               "email": this.userForm.email
             }, {
             headers: {

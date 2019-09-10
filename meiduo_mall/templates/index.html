@@ -17,7 +17,7 @@
 		<div class="header">
 			<div class="welcome fl">欢迎来到美多商城!</div>
 			<div class="fr">
-				<div class="login_info fl" v-if="username">
+				<div class="login_btn fl" v-if="username">
 					欢迎您：<em>[[username]]</em>
 					<a href="{{ url('users:logout') }}" class="quit">退出</a>
 				</div>
