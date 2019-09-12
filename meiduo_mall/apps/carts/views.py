@@ -184,7 +184,7 @@ class CartsView(View):
         if user.is_authenticated:
             # 用户已登录，修改redis购物车
             # 用户已登录，修改redis购物车
-            redis_conn = get_redis_connection('cart')
+            redis_conn = get_redis_connection('carts')
             pl = redis_conn.pipeline()
             # 因为接口设计为幂等的，直接覆盖
             pl.hset('carts_%s' % user.id, sku_id, count)
@@ -255,7 +255,7 @@ class CartsView(View):
         if user is not None and user.is_authenticated:
             # 用户未登录，删除redis购物车
             # 用户未登录，删除redis购物车
-            redis_conn = get_redis_connection('cart')
+            redis_conn = get_redis_connection('carts')
             pl = redis_conn.pipeline()
             # 删除键，就等价于删除了整条记录
             pl.hdel('carts_%s' % user.id, sku_id)
@@ -302,7 +302,7 @@ class CartsSelectAllView(View):
         if user is not None and user.is_authenticated:
             # 用户已登录，操作redis购物车
             # 用户已登录，操作redis购物车
-            redis_conn = get_redis_connection('cart')
+            redis_conn = get_redis_connection('carts')
             cart = redis_conn.hgetall('carts_%s' % user.id)
             sku_id_list = cart.keys()
             if selected:

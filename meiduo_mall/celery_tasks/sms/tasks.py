@@ -2,6 +2,8 @@ from libs.yuntongxun.sms import CCP
 from celery_tasks.main import app
 import logging
 logger = logging.getLogger('django')
+
+
 @app.task(name='send_sms_code',bind=True,default_retry_delay=10)
 def send_sms_code(self,mobile,sms_code,):
     try:

@@ -9,7 +9,7 @@ from .views import sku
 from .views import image
 from .views import statistical
 from .views import spu
-
+from .views import order
 
 urlpatterns = [
 
@@ -37,43 +37,56 @@ urlpatterns = [
 
     ##############################用户######################################################
 
-    # 查询用户信息
+    # 用户信息的 查询和新增
     url(r'^users/$', user.UserListCreateView.as_view()),
 
 
     ##############################商品管理---图片######################################################
 
-
+    # 新增图片时候的 获取SKU id数据
+    url(r'^skus/simple/$', image.SimpleSKUListAPIView.as_view()),
 
     ##############################商品管理---SKU######################################################
 
-    # 新增图片时获取SKU数据的视图集
-    url(r'^skus/simple/$', image.SimpleSKUListAPIView.as_view()),
-    # 获取三级分类数据
+
+
+    # 新增SKU数据时候的 获取三级分类数据
     url(r'^skus/categories/$', sku.SKUCategoriesListView.as_view()),
+
+    # 新增SKU数据时候的 获取SPU商品规格信息
+    url(r'^goods/(?P<pk>\d+)/specs/$', sku.SPUSpecView.as_view()),
+
+
 
     ##############################商品管理---SPU######################################################
 
 
-    # 获取spu数据
+    # 获取SPU表数据
     url(r'^goods/simple/$', spu.SPUGoodsListAPIView.as_view()),
+
+
+
+
 ]
 
 
 
-# 图片管理视图集的url
+
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 
+
+# 图片管理视图集的url
 router.register(r'skus/images',image.ImageModelViewSet,basename='skus/images')
-
-urlpatterns += router.urls
-
-
 # SKU管理视图集的url
-router = DefaultRouter()
-
-router.register(r'^skus',sku.SKUModelViewSet,basename='skus')
+router.register(r'^skus',sku.SKUModelViewSet,basename='skus'),
+# 订单管理视图集的url
+router.register(r'^orders',order.OrderModelViewSet,basename='orders')
 
 urlpatterns += router.urls
+
+
+
+
+

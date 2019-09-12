@@ -10,7 +10,7 @@ from apps.meiduo_admin.utils import CustomPageNumberPagination
 
 
 
-# 获取图片的视图集
+# 获取图片的视图集 ---新增、更新、删除功能
 class ImageModelViewSet(ModelViewSet):
 
     queryset = SKUImage.objects.all()
@@ -47,7 +47,7 @@ class ImageModelViewSet(ModelViewSet):
         },status=status.HTTP_201_CREATED)
 
 
-# 新增图片时获取SKU数据的视图集
+# 新增图片时候的 获取SKU数据 视图集
 class SimpleSKUListAPIView(ListAPIView):
 
     queryset = SKU.objects.all()

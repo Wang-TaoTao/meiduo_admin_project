@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from apps.users.models import User
 
-# 查询用户序列化器
+# 查询用户信息序列化器
 class UserSerializer(serializers.ModelSerializer):
 
 
@@ -13,7 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 
-# 新增用户序列化器
+# 新增用户信息序列化器
 class UserAddSerializer(serializers.ModelSerializer):
 
     # 新增password2 确认密码字段

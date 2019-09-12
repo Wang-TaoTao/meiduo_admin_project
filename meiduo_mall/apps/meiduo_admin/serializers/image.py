@@ -18,7 +18,7 @@ class SKUImageSerializer(serializers.ModelSerializer):
         fields = ['id','sku','image']
 
 
-# 获取新增图片时的SKU数据 序列化器
+# 新增图片时候的 获取SKU id数据 序列化器
 class SimpleSKUSerializer(serializers.ModelSerializer):
 
 

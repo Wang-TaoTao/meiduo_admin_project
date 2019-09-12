@@ -13,7 +13,7 @@ from apps.users.models import User
 
 
 
-# 查询和新增 用户信息
+# 用户信息的 查询和新增
 class UserListCreateView(ListCreateAPIView):
 
     # 查询结果集
