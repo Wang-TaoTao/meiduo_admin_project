@@ -44,7 +44,7 @@ export default {
   methods:{
     fnGetData:function(num){
       let token = localStorage.token;
-      this.axios.get(cons.apis + '/specs/options/', {
+      this.axios.get(cons.apis + '/goods/options/', {
           headers: {
             'Authorization': 'JWT ' + token
           },

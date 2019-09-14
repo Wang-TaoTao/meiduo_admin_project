@@ -93,7 +93,7 @@ export default {
   	fnPopShow(id){
   		this.pop_show = true;
       this.edit_id = id;
-      this.axios.get(cons.apis + '/specs/options/'+this.edit_id+'/', {
+      this.axios.get(cons.apis + '/goods/options/'+this.edit_id+'/', {
             headers: {
               'Authorization': 'JWT ' + token
             },
@@ -108,7 +108,7 @@ export default {
       });
   	},
   	submitForm(){
-  		this.axios.put(cons.apis + '/specs/options/'+this.edit_id+'/', {
+  		this.axios.put(cons.apis + '/goods/options/'+this.edit_id+'/', {
               "value":this.optionsForm.name,
               "spec_id":this.optionsForm.spec_id
             }, {
@@ -135,7 +135,7 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          this.axios.delete(cons.apis + '/specs/options/'+this.edit_id+'/',{
+          this.axios.delete(cons.apis + '/goods/options/'+this.edit_id+'/',{
               headers: {
                 'Authorization': 'JWT ' + token
               },

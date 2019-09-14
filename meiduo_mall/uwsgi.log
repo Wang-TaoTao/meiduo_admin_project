@@ -1,0 +1,110 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Sep 14 15:15:19 2019] ***
+compiled with version: 5.4.0 20160609 on 22 August 2019 11:10:28
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/python/Desktop/meiduo_admin/meiduo_admin_project/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/python/Desktop/meiduo_admin/meiduo_admin_project/meiduo_mall
+your processes number limit is 15581
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.119.128:8001 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44431 (port auto-assigned) fd 3
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0xc438f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xc438f0 pid: 87354 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 87354)
+spawned uWSGI worker 1 (pid: 87356, cores: 2)
+spawned uWSGI worker 2 (pid: 87357, cores: 2)
+spawned uWSGI worker 3 (pid: 87358, cores: 2)
+spawned uWSGI worker 4 (pid: 87359, cores: 2)
+spawned uWSGI http 1 (pid: 87362)
+[pid: 87359|app: 0|req: 1/1] 192.168.119.128 () {36 vars in 610 bytes} [Sat Sep 14 15:17:19 2019] GET / => generated 96714 bytes in 12790 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/css/reset.css
+WARNING base 152 Not Found: /static/js/common.js
+[pid: 87359|app: 0|req: 3/3] 192.168.119.128 () {36 vars in 586 bytes} [Sat Sep 14 15:17:36 2019] GET /static/js/common.js => generated 8109 bytes in 299 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 87359|app: 0|req: 3/3] 192.168.119.128 () {36 vars in 603 bytes} [Sat Sep 14 15:17:36 2019] GET /static/css/reset.css => generated 8112 bytes in 462 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/jquery-1.12.4.min.js
+[pid: 87359|app: 0|req: 4/4] 192.168.119.128 () {36 vars in 608 bytes} [Sat Sep 14 15:17:37 2019] GET /static/js/jquery-1.12.4.min.js => generated 8142 bytes in 78 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/js/index.js
+[pid: 87359|app: 0|req: 5/5] 192.168.119.128 () {36 vars in 584 bytes} [Sat Sep 14 15:17:37 2019] GET /static/js/index.js => generated 8106 bytes in 36 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/axios-0.18.0.min.js
+[pid: 87356|app: 0|req: 2/6] 192.168.119.128 () {36 vars in 606 bytes} [Sat Sep 14 15:17:36 2019] GET /static/js/axios-0.18.0.min.js => generated 8139 bytes in 10043 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/vue-2.5.16.js
+[pid: 87356|app: 0|req: 2/7] 192.168.119.128 () {36 vars in 594 bytes} [Sat Sep 14 15:17:36 2019] GET /static/js/vue-2.5.16.js => generated 8121 bytes in 10047 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/images/logo.png
+[pid: 87357|app: 0|req: 2/8] 192.168.119.128 () {36 vars in 617 bytes} [Sat Sep 14 15:17:38 2019] GET /static/images/logo.png => generated 8118 bytes in 8875 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/slide.js
+[pid: 87357|app: 0|req: 2/9] 192.168.119.128 () {36 vars in 584 bytes} [Sat Sep 14 15:17:37 2019] GET /static/js/slide.js => generated 8106 bytes in 9757 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/js/host.js
+WARNING base 152 Not Found: /static/css/main.css
+[pid: 87358|app: 0|req: 2/10] 192.168.119.128 () {36 vars in 601 bytes} [Sat Sep 14 15:17:36 2019] GET /static/css/main.css => generated 8109 bytes in 11573 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 87358|app: 0|req: 2/11] 192.168.119.128 () {36 vars in 582 bytes} [Sat Sep 14 15:17:36 2019] GET /static/js/host.js => generated 8103 bytes in 11572 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/images/logo.png
+[pid: 87358|app: 0|req: 3/12] 192.168.119.128 () {36 vars in 617 bytes} [Sat Sep 14 15:17:49 2019] GET /static/images/logo.png => generated 8118 bytes in 106 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /favicon.ico
+[pid: 87358|app: 0|req: 4/13] 192.168.119.128 () {36 vars in 570 bytes} [Sat Sep 14 15:17:54 2019] GET /favicon.ico => generated 8085 bytes in 48 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+[pid: 87358|app: 0|req: 5/14] 192.168.119.128 () {36 vars in 622 bytes} [Sat Sep 14 15:18:14 2019] GET /areas/ => generated 1775 bytes in 787 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 87359|app: 0|req: 6/15] 192.168.119.128 () {38 vars in 653 bytes} [Sat Sep 14 15:35:46 2019] GET /areas/ => generated 1775 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 87359|app: 0|req: 7/16] 192.168.119.128 () {36 vars in 610 bytes} [Sat Sep 14 15:35:49 2019] GET / => generated 96714 bytes in 1048 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/css/reset.css
+[pid: 87356|app: 0|req: 3/17] 192.168.119.128 () {36 vars in 603 bytes} [Sat Sep 14 15:35:50 2019] GET /static/css/reset.css => generated 8112 bytes in 27 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/common.js
+WARNING base 152 Not Found: /static/css/main.css
+[pid: 87356|app: 0|req: 5/18] 192.168.119.128 () {36 vars in 599 bytes} [Sat Sep 14 15:35:50 2019] GET /static/css/main.css => generated 8109 bytes in 21 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+[pid: 87356|app: 0|req: 5/19] 192.168.119.128 () {36 vars in 586 bytes} [Sat Sep 14 15:35:50 2019] GET /static/js/common.js => generated 8109 bytes in 42 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/js/host.js
+WARNING base 152 Not Found: /static/js/jquery-1.12.4.min.js
+[pid: 87357|app: 0|req: 4/20] 192.168.119.128 () {36 vars in 582 bytes} [Sat Sep 14 15:35:50 2019] GET /static/js/host.js => generated 8103 bytes in 63 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/js/index.js
+WARNING base 152 Not Found: /static/js/vue-2.5.16.js
+[pid: 87359|app: 0|req: 9/22] 192.168.119.128 () {36 vars in 583 bytes} [Sat Sep 14 15:35:50 2019] GET /static/js/index.js => generated 8106 bytes in 39 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 87358|app: 0|req: 7/23] 192.168.119.128 () {36 vars in 608 bytes} [Sat Sep 14 15:35:50 2019] GET /static/js/jquery-1.12.4.min.js => generated 8142 bytes in 68 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/js/slide.js
+[pid: 87359|app: 0|req: 9/24] 192.168.119.128 () {36 vars in 583 bytes} [Sat Sep 14 15:35:51 2019] GET /static/js/slide.js => generated 8106 bytes in 26 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+[pid: 87358|app: 0|req: 7/24] 192.168.119.128 () {36 vars in 594 bytes} [Sat Sep 14 15:35:50 2019] GET /static/js/vue-2.5.16.js => generated 8121 bytes in 75 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/axios-0.18.0.min.js
+[pid: 87357|app: 0|req: 4/25] 192.168.119.128 () {36 vars in 606 bytes} [Sat Sep 14 15:35:50 2019] GET /static/js/axios-0.18.0.min.js => generated 8139 bytes in 104 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/images/logo.png
+[pid: 87359|app: 0|req: 10/26] 192.168.119.128 () {36 vars in 616 bytes} [Sat Sep 14 15:35:51 2019] GET /static/images/logo.png => generated 8118 bytes in 25 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 87359|app: 0|req: 11/27] 192.168.119.128 () {36 vars in 621 bytes} [Sat Sep 14 15:35:54 2019] GET /areas/ => generated 1775 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 1)
+[pid: 87359|app: 0|req: 12/28] 192.168.119.128 () {38 vars in 653 bytes} [Sat Sep 14 17:00:11 2019] GET /areas/ => generated 1775 bytes in 692 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 87356|app: 0|req: 7/29] 192.168.119.128 () {36 vars in 609 bytes} [Sat Sep 14 19:16:47 2019] GET / => generated 96714 bytes in 14848 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/host.js
+[pid: 87356|app: 0|req: 7/30] 192.168.119.128 () {36 vars in 582 bytes} [Sat Sep 14 19:17:02 2019] GET /static/js/host.js => generated 8103 bytes in 4068 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/js/slide.js
+[pid: 87356|app: 0|req: 8/31] 192.168.119.128 () {36 vars in 584 bytes} [Sat Sep 14 19:17:06 2019] GET /static/js/slide.js => generated 8106 bytes in 20 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/index.js
+[pid: 87356|app: 0|req: 9/32] 192.168.119.128 () {36 vars in 584 bytes} [Sat Sep 14 19:17:06 2019] GET /static/js/index.js => generated 8106 bytes in 103 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/css/main.css
+WARNING base 152 Not Found: /static/js/axios-0.18.0.min.js
+[pid: 87357|app: 0|req: 6/33] 192.168.119.128 () {36 vars in 601 bytes} [Sat Sep 14 19:17:02 2019] GET /static/css/main.css => generated 8109 bytes in 11685 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+[pid: 87357|app: 0|req: 6/34] 192.168.119.128 () {36 vars in 606 bytes} [Sat Sep 14 19:17:06 2019] GET /static/js/axios-0.18.0.min.js => generated 8139 bytes in 7419 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/images/logo.png
+[pid: 87357|app: 0|req: 7/35] 192.168.119.128 () {36 vars in 617 bytes} [Sat Sep 14 19:17:14 2019] GET /static/images/logo.png => generated 8118 bytes in 36 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING base 152 Not Found: /static/js/jquery-1.12.4.min.js
+[pid: 87358|app: 0|req: 9/37] 192.168.119.128 () {36 vars in 594 bytes} [Sat Sep 14 19:17:02 2019] GET /static/js/vue-2.5.16.js => generated 8121 bytes in 13609 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+[pid: 87358|app: 0|req: 9/37] 192.168.119.128 () {36 vars in 608 bytes} [Sat Sep 14 19:17:02 2019] GET /static/js/jquery-1.12.4.min.js => generated 8142 bytes in 13330 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/js/common.js
+WARNING base 152 Not Found: /static/css/reset.css
+[pid: 87359|app: 0|req: 14/38] 192.168.119.128 () {36 vars in 586 bytes} [Sat Sep 14 19:17:02 2019] GET /static/js/common.js => generated 8109 bytes in 16849 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+[pid: 87359|app: 0|req: 14/39] 192.168.119.128 () {36 vars in 603 bytes} [Sat Sep 14 19:17:02 2019] GET /static/css/reset.css => generated 8112 bytes in 16853 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+WARNING base 152 Not Found: /static/images/logo.png
+[pid: 87358|app: 0|req: 10/40] 192.168.119.128 () {36 vars in 617 bytes} [Sat Sep 14 19:17:19 2019] GET /static/images/logo.png => generated 8118 bytes in 8 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)
+WARNING base 152 Not Found: /favicon.ico
+[pid: 87356|app: 0|req: 10/41] 192.168.119.128 () {36 vars in 570 bytes} [Sat Sep 14 19:17:20 2019] GET /favicon.ico => generated 8085 bytes in 19 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 1)

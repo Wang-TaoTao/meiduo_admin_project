@@ -54,7 +54,7 @@ export default {
   },
   methods:{
     submitForm(){
-        this.axios.post(cons.apis + '/specs/options/', {
+        this.axios.post(cons.apis + '/goods/options/', {
               "value":this.optionsForm.name,
               "spec_id":this.optionsForm.specs_id
             }, {
